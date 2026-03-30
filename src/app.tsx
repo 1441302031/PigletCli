@@ -28,8 +28,12 @@ export function App({boot}: AppProps) {
   return (
     <Box flexDirection="column" paddingX={1}>
       <WelcomeCard boot={boot} />
-      {timelineSection}
-      {composerSection}
+      <Box flexDirection="column" flexGrow={1}>
+        {timelineSection}
+      </Box>
+      <Box flexDirection="column">
+        {composerSection}
+      </Box>
     </Box>
   );
 }
