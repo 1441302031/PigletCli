@@ -26,7 +26,7 @@
   1. 用户启动工具后可以看到欢迎卡片，其中包含产品名、模型和目录信息
   2. 用户在历史输出变长后仍然拥有固定可见的底部输入区
   3. 用户输入 `/` 后可以看到带说明文字的命令候选，并可用方向键、回车、Tab、Esc 完成操作
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
 - [ ] 01-01: 搭建 Ink 应用壳层与欢迎区
@@ -88,7 +88,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. 终端壳层与命令模式基础 | 0/TBD | Not started | - |
+| 1. 终端壳层与命令模式基础 | 0/3 | Not started | - |
 | 2. 工作中反馈与流式交互闭环 | 0/TBD | Not started | - |
 | 3. 过程时间线与可靠性体验 | 0/TBD | Not started | - |
 | 4. 工程化验证与发布准备 | 0/TBD | Not started | - |

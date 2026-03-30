@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-03-30)
 ## Current Position
 
 Phase: 1 of 4 (终端壳层与命令模式基础)  
-Plan: 0 of 0 in current phase  
-Status: Ready to plan  
-Last activity: 2026-03-30 - 完成 Phase 1 上下文采集并生成 CONTEXT.md
+Plan: 0 of 3 in current phase  
+Status: Ready to execute  
+Last activity: 2026-03-30 - 完成 Phase 1 研究与计划文件生成
 
 Progress: [░░░░░] 0%
 
@@ -57,5 +57,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-30 16:10  
-Stopped at: Phase 1 context gathered  
-Resume file: .planning/phases/01-terminal-shell-command-foundation/01-CONTEXT.md
+Stopped at: Phase 1 planned  
+Resume file: .planning/phases/01-terminal-shell-command-foundation/01-01-PLAN.md
