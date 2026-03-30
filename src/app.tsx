@@ -1,6 +1,8 @@
 import React from "react";
 import {Box, Text} from "ink";
+import {Composer} from "./components/Composer.js";
 import {WelcomeCard} from "./components/WelcomeCard.js";
+import {createSessionState} from "./state/session-store.js";
 import {tokens} from "./theme/tokens.js";
 
 export type BootInfo = {
@@ -15,20 +17,19 @@ type AppProps = {
 };
 
 export function App({boot}: AppProps) {
+  const session = createSessionState();
+  const timelineSection = (
+    <Box marginTop={1} minHeight={3}>
+      <Text color={tokens.muted}>时间线区域将在后续阶段逐步完善。</Text>
+    </Box>
+  );
+  const composerSection = <Composer value={session.draft} />;
+
   return (
     <Box flexDirection="column" paddingX={1}>
       <WelcomeCard boot={boot} />
-      <Box marginTop={1} minHeight={3}>
-        <Text color={tokens.muted}>时间线区域将在后续阶段逐步完善。</Text>
-      </Box>
-      <Box
-        borderStyle="round"
-        borderColor={tokens.border}
-        paddingX={1}
-        marginTop={1}
-      >
-        <Text color={tokens.placeholder}>{"> [输入将在下一步接入]"}</Text>
-      </Box>
+      {timelineSection}
+      {composerSection}
     </Box>
   );
 }
