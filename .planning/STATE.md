@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-03-30)
 Phase: 1 of 4 (终端壳层与命令模式基础)  
 Plan: 0 of 0 in current phase  
 Status: Ready to plan  
-Last activity: 2026-03-30 - 完成项目初始化、研究、需求与路线图
+Last activity: 2026-03-30 - 完成 Phase 1 上下文采集并生成 CONTEXT.md
 
 Progress: [░░░░░] 0%
 
@@ -42,6 +42,8 @@ Recent decisions affecting current work:
 
 - [Init]: 使用 Node.js + TypeScript + Ink 作为首选终端 UI 技术栈
 - [Init]: v1 聚焦单会话 Agent REPL，而不是多会话工作台
+- [Phase 1]: 首屏使用紧凑欢迎卡片，而不是全屏装饰式布局
+- [Phase 1]: 命令模式采用“命令名 + 一句话说明”的可发现式候选面板
 
 ### Pending Todos
 
@@ -54,6 +56,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-30 15:55  
-Stopped at: 项目初始化完成，下一步应进入 Phase 1 规划  
-Resume file: None
+Last session: 2026-03-30 16:10  
+Stopped at: Phase 1 context gathered  
+Resume file: .planning/phases/01-terminal-shell-command-foundation/01-CONTEXT.md
