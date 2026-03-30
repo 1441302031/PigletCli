@@ -54,6 +54,16 @@ PigLet CLI 是一个本地运行的终端式 REPL 工具，目标是提供接近
 | v1 聚焦单会话 Agent REPL，而不是多会话工作台 | 先把交互核心闭环打磨完整，减少范围扩散 | — Pending |
 | 将命令模式、working 状态、流式输出和事件时间线视为同一级核心能力 | 这些能力共同决定“像不像一个活着的 Agent” | — Pending |
 
+## language specifications:
+
+- 从现在开始，GSD 生成的所有项目文档一律使用简体中文输出
+- 包括但不限于：PROJECT.md、REQUIREMENTS.md、ROADMAP.md、CONTEXT.md、PLAN.md、UI-SPEC.md、UI-REVIEW.md、HANDOFF.md、验证报告、阶段说明
+- 文件名保持 GSD 默认英文命名，不需要改名
+- Markdown 标题、正文、注释、说明、任务列表、验收标准全部用简体中文
+- 代码、命令、路径、API 字段名、数据库字段名保持原文，不做翻译
+- 如需引用英文术语，采用“中文解释（English）”格式，首次出现时注明
+- 后续所有 phase、plan、review、handoff 默认继承这个规则，除非我明确说明改为英文
+
 ## Evolution
 
 此文档会在阶段切换和里程碑完成时持续演进。
