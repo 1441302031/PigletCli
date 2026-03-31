@@ -9,7 +9,7 @@ describe("App command mode", () => {
         boot={{
           productName: "PigLet CLI",
           version: "0.1.0",
-          model: "gpt-5.4-mini",
+          model: "deepseek-chat",
           cwd: "J:/Codex_Project/PigLetCli"
         }}
       />
@@ -20,6 +20,7 @@ describe("App command mode", () => {
     await new Promise(resolve => setTimeout(resolve, 0));
 
     const frame = lastFrame() ?? "";
+    expect(frame).toContain("/exit");
     expect(frame).toContain("/model");
     expect(frame).toContain("/fast");
   });

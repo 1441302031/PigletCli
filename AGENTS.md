@@ -37,3 +37,7 @@ Git history favors short conventional commits such as `feat:`, `fix:`, `docs:`, 
 ## Security & Configuration Tips
 
 Do not commit real API keys or private `.env` files. The launcher expects env templates such as `.env.mock` or `.env.deepseek`; keep sensitive values in untracked local files. When debugging imports, verify the active checkout with `python -c "import PigLetCli; print(PigLetCli.__file__)"`.
+
+# commit local & push remote repository
+
+gsd verify work complete, auto commit local and push remote repository

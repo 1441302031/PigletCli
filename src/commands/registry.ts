@@ -2,6 +2,10 @@ import type {CommandDefinition} from "./types.js";
 
 export const commandRegistry: CommandDefinition[] = [
   {
+    name: "/exit",
+    description: "exit the repl session"
+  },
+  {
     name: "/model",
     description: "choose between deepseek-chat and deepseek-reasoner"
   },
