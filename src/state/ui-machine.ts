@@ -2,6 +2,10 @@ export type UIMode =
   | "idle"
   | "command_suggesting"
   | "submitting"
+  | "working"
+  | "streaming"
+  | "interrupted"
+  | "failed"
   | "completed";
 
 export type UIState = {
@@ -22,6 +26,22 @@ type SubmitCompleteEvent = {
   type: "SUBMIT_COMPLETE";
 };
 
+type RequestStartedEvent = {
+  type: "REQUEST_STARTED";
+};
+
+type StreamStartedEvent = {
+  type: "STREAM_STARTED";
+};
+
+type RequestInterruptedEvent = {
+  type: "REQUEST_INTERRUPTED";
+};
+
+type RequestFailedEvent = {
+  type: "REQUEST_FAILED";
+};
+
 type CancelCommandEvent = {
   type: "CANCEL_COMMAND";
 };
@@ -30,6 +50,10 @@ export type UIEvent =
   | InputChangedEvent
   | SubmitEvent
   | SubmitCompleteEvent
+  | RequestStartedEvent
+  | StreamStartedEvent
+  | RequestInterruptedEvent
+  | RequestFailedEvent
   | CancelCommandEvent;
 
 export function transition(state: UIState, event: UIEvent): UIState {
@@ -48,6 +72,26 @@ export function transition(state: UIState, event: UIEvent): UIState {
       return {
         ...state,
         mode: "completed"
+      };
+    case "REQUEST_STARTED":
+      return {
+        ...state,
+        mode: "working"
+      };
+    case "STREAM_STARTED":
+      return {
+        ...state,
+        mode: "streaming"
+      };
+    case "REQUEST_INTERRUPTED":
+      return {
+        ...state,
+        mode: "interrupted"
+      };
+    case "REQUEST_FAILED":
+      return {
+        ...state,
+        mode: "failed"
       };
     case "CANCEL_COMMAND":
       return {

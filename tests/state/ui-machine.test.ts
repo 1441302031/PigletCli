@@ -21,4 +21,28 @@ describe("ui-machine", () => {
     expect(submitting.mode).toBe("submitting");
     expect(completed.mode).toBe("completed");
   });
+
+  it("enters working and streaming during a request lifecycle", () => {
+    const submitting = transition(
+      {mode: "idle", draft: "hello"},
+      {type: "SUBMIT"}
+    );
+    const working = transition(submitting, {type: "REQUEST_STARTED"});
+    const streaming = transition(working, {type: "STREAM_STARTED"});
+
+    expect(working.mode).toBe("working");
+    expect(streaming.mode).toBe("streaming");
+  });
+
+  it("supports interrupted and failed terminal states", () => {
+    const working = transition(
+      {mode: "submitting", draft: "hello"},
+      {type: "REQUEST_STARTED"}
+    );
+    const interrupted = transition(working, {type: "REQUEST_INTERRUPTED"});
+    const failed = transition(working, {type: "REQUEST_FAILED"});
+
+    expect(interrupted.mode).toBe("interrupted");
+    expect(failed.mode).toBe("failed");
+  });
 });

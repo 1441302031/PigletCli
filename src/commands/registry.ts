@@ -3,7 +3,7 @@ import type {CommandDefinition} from "./types.js";
 export const commandRegistry: CommandDefinition[] = [
   {
     name: "/model",
-    description: "choose what model and reasoning effort to use"
+    description: "choose between deepseek-chat and deepseek-reasoner"
   },
   {
     name: "/fast",

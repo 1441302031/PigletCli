@@ -7,7 +7,7 @@ render(
     boot={{
       productName: "PigLet CLI",
       version: "0.1.0",
-      model: "gpt-5.4-mini",
+      model: "deepseek-chat",
       cwd: process.cwd()
     }}
   />
