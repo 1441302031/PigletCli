@@ -7,7 +7,10 @@ type ComposerProps = {
 };
 
 export function Composer({value}: ComposerProps) {
-  const content = value.length > 0 ? value : "> 输入内容，后续将接入交互逻辑";
+  const content =
+    value.length > 0
+      ? value
+      : "> 输入内容，或输入 / 查看命令；Tab 补全，Escape 退出";
 
   return (
     <Box
